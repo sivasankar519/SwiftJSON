@@ -13,6 +13,9 @@
 		EF157C131BF5368E005FE37F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF157C121BF5368E005FE37F /* Images.xcassets */; };
 		EF157C161BF5368E005FE37F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF157C141BF5368E005FE37F /* LaunchScreen.xib */; };
 		EF157C221BF5368E005FE37F /* SwiftSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF157C211BF5368E005FE37F /* SwiftSampleTests.swift */; };
+		EF157C2E1BF558C7005FE37F /* DataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF157C2D1BF558C7005FE37F /* DataTableViewController.swift */; };
+		EF69741F1BF6756A00522858 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF69741E1BF6756A00522858 /* DataManager.swift */; };
+		EF6974211BF67DE000522858 /* TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6974201BF67DE000522858 /* TableCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,9 @@
 		EF157C1B1BF5368E005FE37F /* SwiftSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF157C201BF5368E005FE37F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF157C211BF5368E005FE37F /* SwiftSampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftSampleTests.swift; sourceTree = "<group>"; };
+		EF157C2D1BF558C7005FE37F /* DataTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataTableViewController.swift; sourceTree = "<group>"; };
+		EF69741E1BF6756A00522858 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataManager.swift; path = ../DataManager.swift; sourceTree = "<group>"; };
+		EF6974201BF67DE000522858 /* TableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +85,9 @@
 			children = (
 				EF157C0B1BF5368E005FE37F /* AppDelegate.swift */,
 				EF157C0D1BF5368E005FE37F /* ViewController.swift */,
+				EF157C2D1BF558C7005FE37F /* DataTableViewController.swift */,
+				EF6974201BF67DE000522858 /* TableCell.swift */,
+				EF69741E1BF6756A00522858 /* DataManager.swift */,
 				EF157C0F1BF5368E005FE37F /* Main.storyboard */,
 				EF157C121BF5368E005FE37F /* Images.xcassets */,
 				EF157C141BF5368E005FE37F /* LaunchScreen.xib */,
@@ -156,7 +165,9 @@
 		EF157BFE1BF5368E005FE37F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastSwiftMigration = 0710;
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "SIVASANKAR DEVABATHINI";
 				TargetAttributes = {
 					EF157C051BF5368E005FE37F = {
@@ -212,7 +223,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF6974211BF67DE000522858 /* TableCell.swift in Sources */,
 				EF157C0E1BF5368E005FE37F /* ViewController.swift in Sources */,
+				EF69741F1BF6756A00522858 /* DataManager.swift in Sources */,
+				EF157C2E1BF558C7005FE37F /* DataTableViewController.swift in Sources */,
 				EF157C0C1BF5368E005FE37F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -276,6 +290,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -342,6 +357,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SwiftSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "SSD.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -352,6 +368,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SwiftSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "SSD.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -370,6 +387,7 @@
 				);
 				INFOPLIST_FILE = SwiftSampleTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "SSD.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftSample.app/SwiftSample";
 			};
@@ -385,6 +403,7 @@
 				);
 				INFOPLIST_FILE = SwiftSampleTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "SSD.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftSample.app/SwiftSample";
 			};
@@ -409,6 +428,7 @@
 				EF157C271BF5368E005FE37F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EF157C281BF5368E005FE37F /* Build configuration list for PBXNativeTarget "SwiftSampleTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +437,7 @@
 				EF157C2A1BF5368E005FE37F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
